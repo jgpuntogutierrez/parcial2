@@ -1,0 +1,27 @@
+<div *ngIf="selected">
+  <app-receta-detail [recetaDetail]="selectedReceta"></app-receta-detail>
+ </div>
+
+ <hr />
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col mb-2" *ngFor="let receta of recetas">
+      <div class="card" style="width: 18rem;">
+        <img
+         class="card-img-top"
+         src="{{ receta.imagen }}"
+         alt="{{ receta.nombre }}"
+         (click)="onSelected(receta)"
+        />
+          <div class="card-body">
+            <h5 class="card-title">{{receta.nombre}}</h5>
+            <p class="card-text">{{receta.duracion}}</p>
+            <a href="#" class="btn btn-primary" (click)="onSelected(receta)">Ver Detalles</a>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+

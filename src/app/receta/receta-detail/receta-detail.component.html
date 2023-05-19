@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ recetaDetail.nombre }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ recetaDetail.imagen }}"
+          alt="{{ recetaDetail.nombre }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Descripcion</dt>
+        <dd>{{ recetaDetail.descripcion }}</dd>
+        <hr />
+        <dt>Ingredientes</dt>
+        <dd>{{ recetaDetail.ingredientes }}</dd>
+        <hr />
+        <dt class="bold">Autor de Recetas</dt>
+        <dd>{{ recetaDetail.autorReceta }}</dd>
+        <hr />
+        <dt class="bold">Mas Info</dt>
+        <dd>{{ recetaDetail.dificultad }}</dd>
+        <dd>{{ recetaDetail.categoria }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

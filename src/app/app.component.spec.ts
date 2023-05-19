@@ -1,6 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { RecetaListComponent } from './receta/receta-list/receta-list.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +11,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        RecetaListComponent
       ],
     }).compileComponents();
   });
@@ -33,3 +36,14 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span')?.textContent).toContain('parcial2 app is running!');
   });
 });
+
+
+
+
+
+
+
+
+
+
+
